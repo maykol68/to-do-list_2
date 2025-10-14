@@ -5,24 +5,26 @@ FactoryBot.define do
     completed { false }
 
     factory :task_without_title do
-        title { nil } 
+      title { nil }
     end
 
     factory :task_without_description do
-        description { nil }
+      description { nil }
     end
 
-    factory :task_with_long_description do 
-        description { "a" * 100 }
+    factory :task_with_long_description do
+      description { "a" * 100 }
     end
-    factory :task_with_long_title do 
-        title { "a" * 50}
+
+    factory :task_with_long_title do
+      title { "a" * 50 }
     end
   end
 
-    factory :task_2 do
-        title { "Mi segunda tarea" }
-        description { "Descripción de prueba" }
-        completed { false }
-    end
+  factory :task_2, class: 'Task' do
+    title { "Mi segunda tarea" }
+    description { "Descripción de prueba" }
+    completed { false }
+  end
 end
+
